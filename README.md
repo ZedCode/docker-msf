@@ -11,11 +11,13 @@ You don't have to do this, but it is highly encouraged that you use the metasplo
 `git clone https://github.com/ZedCode/docker-msf.git docker-msf`
 
 **Step 2** Build the image:
+
 `cd docker-msf`
 
 `sudo docker build -t="[your user]/docker-msf" .`
 
 **Step 3** Mount the msf-postgres directory and copy the contents to the mount via the firstRun.sh script:
+
 `mkdir msf-postgres`
 
 then
@@ -30,9 +32,11 @@ NOTE: it is important that you use the exact path above as other things have thi
 Once again, this path must be identical as before, except instead of main-save, it's just main at the end of the path.
 
 **Step 5** Run the startup script inside the container:
+
 `/bin/bash /startUp.sh`
 
 **Step 6** Become the correct user and launch msfconsole:
+
 `sudo -u mallory /msf/msfconsole -L`
 
 If you really don't want to use postgres, you can build the image and then just do step 6.
