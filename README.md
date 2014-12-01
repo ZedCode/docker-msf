@@ -37,4 +37,5 @@ Once again, this path must be identical!
 If you really don't want to use postgres, you can build the image and then just do step 6.
 
 **FAQ**
+
 *Why Mallory?* In information security, the name Mallory is typically used to describe the malicious user. For more see http://en.wikipedia.org/wiki/Alice_and_Bob under cast of characters.
