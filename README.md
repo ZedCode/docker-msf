@@ -15,6 +15,7 @@ You don't have to do this, but it is highly encouraged that you use the metasplo
 `sudo docker build -t="[your user]/docker-msf" .`
 
 **Step 3** Mount the msf-postgres directory and copy the contents to the mount via the firstRun.sh script:
+`mkdir msf-postgres`
 `sudo docker run -t -i -v [path to current dir]/msf-postgres:/var/lib/postgresql/9.3/main-save [your user]/docker-msf /bin/bash /firstRun.sh`
 NOTE: it is important that you use the exact path above as other things have this path hard coded!
 
