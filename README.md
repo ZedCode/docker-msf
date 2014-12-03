@@ -39,6 +39,18 @@ Once again, this path must be identical as before, except instead of main-save, 
 
 `sudo -u mallory /msf/msfconsole -L`
 
+If you want to run msfconsole with sudo, you'll need to do things
+slightly differently:
+
+`su - mallory`
+
+Then:
+
+`sudo /msf/msfconsole -L`
+
+A line has been added to the mallory user's .bashrc to preserve all the
+ruby related paths.
+
 If you really don't want to use postgres, you can build the image and then just do step 6.
 
 **FAQ**
