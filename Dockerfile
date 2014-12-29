@@ -12,7 +12,7 @@ RUN useradd -d /home/mallory -ms /bin/bash mallory && adduser mallory sudo && se
 RUN mkdir /msf && chown -R mallory:mallory /msf
 USER mallory
 # Change Ruby versions on the following line.
-RUN cd /home/mallory && gpg --keyserver hkp://keys.gnupg.net --recv-keys D39DC0E3 && curl -o rvm.sh -L get.rvm.io && cat rvm.sh | bash -s stable --autolibs=enabled --ruby=1.9.3 && echo "source /home/mallory/.rvm/scripts/rvm" >> /home/mallory/.bash_profile && echo "alias sudo='sudo env PATH=$PATH'" >> /home/mallory/.bashrc
+RUN cd /home/mallory && gpg --keyserver hkp://keys.gnupg.net --recv-keys D39DC0E3 && curl -o rvm.sh -L get.rvm.io && cat rvm.sh | bash -s stable --autolibs=enabled --ruby=1.9.3 && echo "source /home/mallory/.rvm/scripts/rvm" >> /home/mallory/.bash_profile
 # With out this, nothing Ruby related will work right
 ENV PATH $PATH:/home/mallory/.rvm/rubies/default/bin
 # metasploit requires bundler, so install it
